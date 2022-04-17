@@ -34,9 +34,9 @@ const SignUp = () => {
         return <Loading></Loading>
     }
 
-    // after login redirect to home
+    // after signup redirect to login
     if (user || googleUser) {
-        navigate('/home');
+        navigate('/signin');
     }
 
     return (
