@@ -7,6 +7,7 @@ import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 
 const SignIn = () => {
+    const navigate = useNavigate();
     const emailRef = useRef('');
     const passwordRef = useRef('');
     const [
@@ -26,11 +27,10 @@ const SignIn = () => {
     }
 
     if (loading) {
-        <Loading></Loading>
+        return <Loading></Loading>
     }
 
     // after login redirect to home
-    const navigate = useNavigate();
     if (user) {
         navigate('/home');
     }
