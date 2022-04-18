@@ -3,8 +3,8 @@ import { Button, Form } from 'react-bootstrap';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import GoogleAuthentication from '../GoogleAuthentication/GoogleAuthentication';
 import Loading from '../Loading/Loading';
-import googleIcon from '../../images/google-logo.png';
 
 const SignUp = () => {
     const navigate = useNavigate();
@@ -28,14 +28,14 @@ const SignUp = () => {
     }
 
     // sign up with google
-    const [signInWithGoogle, googleUser, googleLoading, googleError] = useSignInWithGoogle(auth);
 
-    if (loading || googleLoading) {
+
+    if (loading) {
         return <Loading></Loading>
     }
 
     // after signup redirect to login
-    if (user || googleUser) {
+    if (user) {
         navigate('/signin');
     }
 
@@ -58,22 +58,7 @@ const SignUp = () => {
                 </Button>
             </Form>
 
-
-            <div className='mt-3 d-flex justify-content-center'>
-                <div className='w-25 px-4'>
-                    <hr />
-                </div>
-                <p>or</p>
-                <div className='w-25 px-4'>
-                    <hr />
-                </div>
-            </div>
-
-
-            <Button onClick={() => signInWithGoogle()} className='w-25 d-block mx-auto border' variant="light" type="submit">
-                <img src={googleIcon} alt="" />
-                <span className='ms-2'>Sign Up With Google</span>
-            </Button>
+            <GoogleAuthentication></GoogleAuthentication>
 
             <div>
                 <hr className='w-50 mx-auto mt-5' />

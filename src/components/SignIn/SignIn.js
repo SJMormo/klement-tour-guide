@@ -7,6 +7,7 @@ import googleIcon from '../../images/google-logo.png';
 import Loading from '../Loading/Loading';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleAuthentication from '../GoogleAuthentication/GoogleAuthentication';
 
 
 const SignIn = () => {
@@ -80,19 +81,8 @@ const SignIn = () => {
                 </p>
             </div>
 
-            <div className='mt-3 d-flex justify-content-center'>
-                <div className='w-25 px-4'>
-                    <hr />
-                </div>
-                <p>or</p>
-                <div className='w-25 px-4'>
-                    <hr />
-                </div>
-            </div>
-            <Button className='w-25 d-block mx-auto border' variant="light" type="submit">
-                <img src={googleIcon} alt="" />
-                <span className='ms-2'>Continue With Google</span>
-            </Button>
+            <GoogleAuthentication></GoogleAuthentication>
+
             <div>
                 <hr className='w-50 mx-auto mt-5' />
                 <p className='text-center'>
