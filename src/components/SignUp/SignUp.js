@@ -70,7 +70,7 @@ const SignUp = () => {
             </div>
 
 
-            <Button onClick={() => signInWithGoogle()} className='w-25 d-block mx-auto' variant="light" type="submit">
+            <Button onClick={() => signInWithGoogle()} className='w-25 d-block mx-auto border' variant="light" type="submit">
                 <img src={googleIcon} alt="" />
                 <span className='ms-2'>Sign Up With Google</span>
             </Button>

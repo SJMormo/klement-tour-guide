@@ -66,7 +66,7 @@ const SignIn = () => {
                     <hr />
                 </div>
             </div>
-            <Button className='w-25 d-block mx-auto' variant="light" type="submit">
+            <Button className='w-25 d-block mx-auto border' variant="light" type="submit">
                 <img src={googleIcon} alt="" />
                 <span className='ms-2'>Continue With Google</span>
             </Button>
