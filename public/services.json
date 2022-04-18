@@ -1,23 +1,23 @@
 [
     {
         "id": "1",
-        "name": "Service name A",
-        "price": 420,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg",
-        "description": "lorem lorem lorem lorem lorem lorem lorem lorem"
+        "name": "Resort Booking",
+        "price": 2000,
+        "img": "./card-images/card1.jpg",
+        "description": "Each room has two master bed. 4 people can stay."
     },
     {
         "id": "2",
-        "name": "Service name B",
-        "price": 420,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg",
-        "description": "lorem lorem lorem lorem lorem lorem lorem lorem"
+        "name": "Keokradong Trekking",
+        "price": 5000,
+        "img": "./card-images/card2.jpg",
+        "description": "I can guide a group of 12 people to trek to second highest peak of Bangladesh, Keokradong."
     },
     {
         "id": "3",
-        "name": "Service name C",
-        "price": 420,
-        "img": "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fbaf991a78bc4896a3e9ad7800abcec6_9366/Ultraboost_22_Shoes_Black_GZ0127_01_standard.jpg",
-        "description": "lorem lorem lorem lorem lorem lorem lorem lorem"
+        "name": "Tour to Khums",
+        "price": 8000,
+        "img": "./card-images/card3.jfif",
+        "description": "You'll get to enjoy Nafakhum, Amiakhum, Satvai Khum, Velakhum and many more."
     }
 ]
