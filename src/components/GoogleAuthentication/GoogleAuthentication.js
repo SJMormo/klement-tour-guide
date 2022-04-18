@@ -33,6 +33,9 @@ const GoogleAuthentication = () => {
                 <img src={googleIcon} alt="" />
                 <span className='ms-2'>Sign Up With Google</span>
             </Button>
+            <p className='text-danger text-center mt-3'>
+                {googleError && googleError.message}
+            </p>
         </div>
     );
 };
