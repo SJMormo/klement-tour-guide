@@ -1,10 +1,12 @@
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import googleIcon from '../../images/google-logo.png';
 import Loading from '../Loading/Loading';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const SignIn = () => {
@@ -17,6 +19,7 @@ const SignIn = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    const [sendPasswordResetEmail, sending, resetPasswordError] = useSendPasswordResetEmail(auth);
 
     // tracking last location
     const location = useLocation();
@@ -40,10 +43,18 @@ const SignIn = () => {
         navigate(from, { replace: true });
     }
 
+    // reset password
+
+    const handlePasswordReset = async () => {
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+        toast('Sent email');
+    }
+
 
     return (
         <div>
-            <h3 className='text-center mt-5'>Sign In Here</h3>
+            <h3 className='text-center text-primary mt-5'>Sign In</h3>
             <div className='w-50 mx-auto'>
                 <Form onSubmit={handleSignIn}>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -80,6 +91,10 @@ const SignIn = () => {
             </Button>
             <div>
                 <hr className='w-50 mx-auto mt-5' />
+                <p className='text-center'>
+                    Forgot Password?<Button onClick={handlePasswordReset} variant="link">Reset Password</Button>
+                </p>
+                <ToastContainer />
                 <p className='text-center'>
                     Don't Have an Account? <Link className="form-link" to="/signup">Create an account</Link>
                 </p>
