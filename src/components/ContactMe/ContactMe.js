@@ -9,9 +9,9 @@ const ContactMe = () => {
         navigate('/thankyou');
     }
     return (
-        <div>
+        <div className='container'>
             <h3 className='mt-5 text-center text-primary'>Connect With me</h3>
-            <Form className='w-25 mx-auto'>
+            <Form className='w-75 mx-auto mt-3'>
                 <Row className="mb-3">
                     <Form.Group as={Col} controlId="formGridEmail">
                         <Form.Control type="email" placeholder="Enter Email" required />
