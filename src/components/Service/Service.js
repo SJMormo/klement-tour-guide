@@ -20,7 +20,7 @@ const Service = ({ service }) => {
                         <br />
                         Description: {description}
                     </Card.Text>
-                    <Button onClick={() => handleDetails(id)} className='btn btn-primary w-100'>Details</Button>
+                    <Button onClick={() => handleDetails(id)} className='btn btn-primary w-100'>Check Out</Button>
                 </Card.Body>
             </Card>
         </Col>
