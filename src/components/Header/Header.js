@@ -21,10 +21,11 @@ const Header = () => {
                 <Navbar.Brand as={Link} to="/">Add Image Here</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
+                    <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
-                        <Nav.Link as={Link} to="/about">About Us</Nav.Link>
                         <Nav.Link href="home#services">Services</Nav.Link>
+                        <Nav.Link as={Link} to="/blogs">Blogs</Nav.Link>
+                        <Nav.Link as={Link} to="/about">About Me</Nav.Link>
                         {
                             user ?
                                 <button type='button' onClick={logOut} className='btn btn-link'>Sign Out</button>
